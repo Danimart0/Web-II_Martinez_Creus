@@ -1,17 +1,29 @@
-<!-- polls/templates/polls/index.html -->
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Polls</title>
+    <link rel="stylesheet" href="{% static 'polls/css/styles.css' %}">
 </head>
 <body>
-    <h1>Latest Questions</h1>
-    <ul>
-        {% for question in latest_question_list %}
-            <li>{{ question.question_text }} - {{ question.pub_date }}</li>
-        {% empty %}
-            <li>No questions are available.</li>
-        {% endfor %}
-    </ul>
+    {% if latest_question_list %}
+        <h1>Latest Questions</h1>
+        <ul>
+            {% for question in latest_question_list %}
+                <li>{{ question.question_text }} - {{ question.pub_date }}</li>
+            {% endfor %}
+        </ul>
+    {% elif orders %}
+        <h1>{{ titulo }}</h1>
+        <p>Total Orders: {{ total_orders }}</p>
+        <p>Total Payments: {{ total_payments }}</p>
+        <ul>
+            {% for order in orders %}
+                <li>Order ID: {{ order.id }} - Total: {{ order.total }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay datos disponibles.</p>
+    {% endif %}
 </body>
 </html>
