@@ -7,7 +7,7 @@
 </head>
 <body>
     {% if latest_question_list %}
-        <h1>Latest Questions</h1>
+        <h1>Preguntas</h1>
         <ul>
             {% for question in latest_question_list %}
                 <li>{{ question.question_text }} - {{ question.pub_date }}</li>
