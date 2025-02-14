@@ -1,18 +1,20 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
     margin: 0;
-    padding: 0;
     text-align: center;
+    color: #333;
 }
 
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px 0;
-    font-size: 24px;
+    background: #0056b3;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .container {
     display: flex;
@@ -23,36 +25,39 @@ header {
 }
 
 .card {
-    background: white;
+    background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 240px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #4a8ed6;
+    border: 3px solid #000000;
+    transition: border-color 0.3s;
 }
 
+.card img:hover {
+    border-color: #ff6f61;
+}
 
 .card h2 {
     font-size: 20px;
     margin: 10px 0;
+    font-weight: bold;
 }
 
-
 .card p {
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
 }
