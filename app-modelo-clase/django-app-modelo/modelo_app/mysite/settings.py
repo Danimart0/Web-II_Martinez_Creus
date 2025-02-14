@@ -36,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls',  # Asegúrate de que 'polls' esté en la lista
+    'polls', 
+    'users', 
 ]
 
 MIDDLEWARE = [
@@ -117,8 +118,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "polls/static"),  # Asegura que Django encuentre los archivos estáticos
+    os.path.join(BASE_DIR, "polls/static"),
+    os.path.join(BASE_DIR, "users/static"),
 ]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
