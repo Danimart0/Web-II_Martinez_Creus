@@ -6,5 +6,5 @@ class User(models.Model):
     profile_image = models.URLField()
 
     def __str__(self):
-      
-        return f"ID: {self.id} - Name: {self.name} - Age: {self.age}"
+       return f"ID: {self.id} - Name: {self.name} - Age: {self.age}"
+       
