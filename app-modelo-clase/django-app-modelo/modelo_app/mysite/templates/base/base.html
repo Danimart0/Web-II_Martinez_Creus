@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <title>Proyecto Django</title>
-    <link rel="stylesheet" href="{% static 'css/base1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
 </head>
 <body>
     <nav>
         <ul>
+            <h1>Estas son tus opciones:</h1>
             <li><a href="{% url 'user_list' %}">Usuarios</a></li>  
             <li><a href="{% url 'indexOrders' %}">Pedidos</a></li> 
             <li><a href="{% url 'indexpolls' %}">Preguntas</a></li> 
