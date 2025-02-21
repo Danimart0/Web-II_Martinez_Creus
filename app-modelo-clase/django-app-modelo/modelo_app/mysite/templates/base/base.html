@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mi Sitio{% endblock %}</title>
-   
+ 
+    <title>Proyecto Django</title>
 </head>
 <body>
-
-    {% include 'base/header.html' %}
+    <nav>
+        <ul>
+            <li><a href="{% url 'user_list' %}">Usuarios</a></li>  <!-- Enlace a la lista de usuarios -->
+            <li><a href="{% url 'indexOrders' %}">Pedidos</a></li> 
+            <li><a href="{% url 'index' %}">Preguntas</a></li> 
+        </ul>
+    </nav>
     
 
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
+    {% block content %}
+    {% endblock %}
 
-
-    {% include 'base/footer.html' %}
-    
-
+   
 </body>
 </html>
