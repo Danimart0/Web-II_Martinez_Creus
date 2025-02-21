@@ -9,7 +9,7 @@ def index(request):
 
 def indexOrders(request):
     data = {
-        "titulo" : "Index de Orders por variable",
+        "titulo" : "Id de las orders",
         "total_orders" : 100,
         "total_payments" : 200,
         "orders":[

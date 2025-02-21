@@ -1,14 +1,14 @@
-/* Base de estilos */
+
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f7f7; /* Fondo suave */
+    background-color: #f9f7f7; 
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #454343; /* Fondo oscuro */
+    background-color: #454343;
     color: white;
     padding: 10px;
     text-align: center;
