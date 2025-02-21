@@ -7,4 +7,6 @@ urlpatterns = [
     path("create", views.createUserView, name="createuserView"),
     path("createUser", views.createUser, name="createUser"),
     path("detail/<int:id>", views.userDetail, name="userDetail"),
+    
+     path('usuarios/edit/<int:id>/', views.user_edit, name='user_edit'),  # Editar usuario
 ]

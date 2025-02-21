@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Proyecto Django</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'user_list' %}">Usuarios</a></li>  <!-- Enlace a la lista de usuarios -->
+            <li><a href="{% url 'indexOrders' %}">Pedidos</a></li>  <!-- Enlace a la lista de pedidos -->
+        </ul>
+    </nav>
+    
+
+    {% block content %}
+    {% endblock %}
+
+   
+</body>
+</html>

@@ -1,27 +1,50 @@
+{% load static %}
+
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuarios</title>
-
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'users/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header>
-        <h1>Lista de Usuarios</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'user_list' %}">Usuarios</a></li>
+                <li><a href="{% url 'createUser' %}">Crear Usuario</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main class="container">
-        {% for user in users %}
-        <div class="card">
-            <img src="{{ user.profile_image }}" alt="Imagen de {{ user.name }}">
-            <h2>{{ user.name }}</h2>
-            <p>Edad: {{ user.age }}</p>
-            <p>ID: {{ user.id }}</p> 
-        </div>
-        {% endfor %}
-    </main>
+
+    <div class="content">
+        <h1>Lista de Usuarios</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.age }}</td>
+                        <td><a href="{% url 'user_edit' user.id %}" target="_blank">Editar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tu Proyecto</p>
+    </footer>
 </body>
 </html>

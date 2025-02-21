@@ -1,0 +1,118 @@
+/* Base de estilos */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Fondo suave */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Fondo oscuro */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+/* Estilos para la tabla de usuarios */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff; /* Fondo blanco para la tabla */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea divisoria */
+}
+
+th {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Fondo alterno para filas */
+}
+
+td a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los botones de acción (como Editar) */
+a {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #007BFF;
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px;
+}
+
+a:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        display: block; 
+        margin: 10px 0;
+    }
+}
