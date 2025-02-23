@@ -1,9 +1,10 @@
+{% load static %}
 
-
-{% block title %}Editar Usuario{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
     <h1>Editar Usuario: {{ user.name }}</h1>
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
     <form method="POST">
         {% csrf_token %}
         

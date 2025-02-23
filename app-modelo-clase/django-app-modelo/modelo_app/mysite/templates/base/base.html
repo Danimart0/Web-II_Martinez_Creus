@@ -12,12 +12,16 @@
 <body>
     <nav>
         <ul>
+            <h1></h1>
             <h1>Estas son tus opciones:</h1>
             <li><a href="{% url 'user_list' %}">Usuarios</a></li>  
             <li><a href="{% url 'indexOrders' %}">Pedidos</a></li> 
             <li><a href="{% url 'indexpolls' %}">Preguntas</a></li> 
+            <li><a href="{% url 'choice_list' %}">Preguntas</a></li> 
         </ul>
     </nav>
+
+    <h1>pagina principal :)</h1>
     
 
     {% block content %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Opciones</title>
+</head>
+<body>
+    <h1>Lista de Opciones</h1>
+    
+    {% if choices %}
+        <ul>
+            {% for choice in choices %}
+                <li>{{ choice.choice_text }} (Votos: {{ choice.votes }})</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay opciones disponibles.</p>
+    {% endif %}
+    
+</body>
+</html>

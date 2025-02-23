@@ -1,6 +1,7 @@
 # polls/views.py
 from django.shortcuts import render
 from .models import Question
+from .models import Choice
 from django.http import HttpResponse
 
 def index(request):
@@ -29,4 +30,6 @@ def indexOrders(request):
     }
     return render(request, 'polls/index.html', data)
 
-
+def choice_list(request):
+    choices = Choice.objects.all()
+    return render(request, "polls/choices.html", {"choices": choices})
